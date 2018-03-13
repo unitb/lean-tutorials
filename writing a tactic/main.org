@@ -1,0 +1,25 @@
+#+begin_src ruby
+,require 'date'
+,"This file was last evaluated on #{Date.today}"
+#+end_src
+(require 'ob-python)
+
+(require 'ob-python)
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '((python . t)))
+#+BEGIN_SRC python :results output
+  import sys
+
+  print sys.version
+  print sys.prefix
+#+END_SRC
+
+#+BEGIN_SRC python
+import time
+print("Hello, today's date is %s" % time.ctime())
+print('Two plus two is')
+return 2 + 2
+#+END_SRC
+
+(byte-recompile-directory)
