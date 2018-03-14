@@ -1,8 +1,11 @@
+
+(load-file "../
+
 #+begin_src ruby
 ,require 'date'
 ,"This file was last evaluated on #{Date.today}"
 #+end_src
-(require 'ob-python)
+(require 'ob-lean)
 
 (require 'ob-python)
 (org-babel-do-load-languages
@@ -21,5 +24,8 @@ print("Hello, today's date is %s" % time.ctime())
 print('Two plus two is')
 return 2 + 2
 #+END_SRC
+
+#+RESULTS:
+: 4
 
 (byte-recompile-directory)
